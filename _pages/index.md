@@ -1,19 +1,22 @@
 ---
-title: Developer Documentation
+title: Home
 permalink: /
 ---
 
-# Developer documentation
+## Welcome to the login.gov developer guide
 
-Learn how to deploy and manage your application, so you can deliver digital services to the people you serve with [login.gov](https://login.gov).
+This contains everything you'll need as a federal government agency to integrate and deploy your application with [login.gov](https://login.gov).
 
-#### How to deploy and manage your application
+### Get started
 
-- [Determine prerequisites]({{site.baseurl}}/attributes/)
-- [Build and configure your application]({{site.baseurl}}/examples/)
-- [Generating self-signed certificates]({{site.baseurl}}/certs/)
-- [Register your application]({{site.baseurl}}/register/)
+<div markdown="1" class="checklist">
+- [Determine prerequisites](/attributes)
+- [Build and configure your application](/examples)
+- [Generating self-signed certificates](/certs)
+- [Register your application](/register)
+</div>
 
-You can learn more about [login.gov](https://login.gov/) and how the identity management system [keeps personal information private](https://login.gov/security/), and visit our [open-source repository](https://github.com/18F/identity-idp).
 
-_Note: The documentation uses standard identity provider terminology as defined in both [OIDC]({{site.baseurl}}/openid-connect/) and [SAML]({{site.baseurl}}/saml/) documentation._
+## Interested in using login.gov?
+
+Are you a federal agency interested is using login.gov for your digital services? Get in contact with us at [partners@login.gov](mailto:partners@login.gov)

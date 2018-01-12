@@ -1,18 +1,14 @@
 ---
 title: SAML
-permalink: /saml/
 redirect_from:
   - /configuring-your-sp/
 ---
 
 # SAML developer guide
 
-login.gov is a standard SAML identity provider, adhering to the [Web Browser SSO Profile](https://en.wikipedia.org/wiki/SAML_2.0#Web_Browser_SSO_Profile) with enhancements for [NIST 800-63-3](https://pages.nist.gov/800-63-3/).
+login.gov is a standard SAML identity provider, adhering to the [Web Browser SSO Profile](https://en.wikipedia.org/wiki/SAML_2.0#Web_Browser_SSO_Profile) with enhancements for [NIST 800-63-3](https://pages.nist.gov/800-63-3/). In this guide:
 
-In this guide:
-
-<!-- MarkdownTOC depth="2" autolink="true" bracket="round" -->
-
+<div markdown="1" class="compact-list">
 - [Getting started](#getting-started)
   - [Configuration](#configuration)
   - [Developer portal](#developer-portal)
@@ -23,8 +19,7 @@ In this guide:
 - [Logout](#logout)
   - [Logout request](#logout-request)
   - [Logout response](#logout-response)
-
-<!-- /MarkdownTOC -->
+</div>
 
 ## Getting started
 

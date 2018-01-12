@@ -1,22 +1,17 @@
 ---
 title: OpenID Connect
-permalink: /openid-connect/
+redirect_from:
+  - /openid-connect/
 ---
 
-# OpenID Connect 1.0 developer guide
+# OpenID Connect developer guide
 
-login.gov supports [OpenID Connect 1.0][openid-connect], an extension of Oauth 2.0, conforming to the [iGov Profile][igov-profile].
+login.gov supports [OpenID Connect 1.0](http://openid.net/developers/specs), an extension of Oauth 2.0, conforming to the [iGov Profile](https://openid.net/wg/igov). Please note: links to the login.gov integration environment in this guide are only accessible to approved integrating agencies.
 
-[openid-connect]: https://openid.net/specs/openid-connect-core-1_0.html
-[igov-profile]: https://openid.net/wg/igov/
+### Contents
 
-In this guide:
-
-<!-- MarkdownTOC depth="4" autolink="true" bracket="round" -->
-
+<div markdown="1" class="compact-list">
 - [Getting started](#getting-started)
-  - [Pick an authentication method](#pick-an-authentication-method)
-  - [Developer portal](#developer-portal)
 - [Auto-discovery](#auto-discovery)
 - [Authorize](#authorize)
   - [Authorization request](#authorization-request)
@@ -31,36 +26,21 @@ In this guide:
 - [Logout](#logout)
   - [Logout Request](#logout-request)
   - [Logout Response](#logout-response)
-
-<!-- /MarkdownTOC -->
+</div>
 
 ## Getting started
 
-### Pick an authentication method
+### Choosing an authentication method
 
-login.gov supports two ways to authenticate clients:
+login.gov supports two ways to authenticate clients: **PKCE** and **private_key_jwt**.
 
-1. PKCE
+- **PKCE**, short for [Proof Key for Code Exchange by OAuth Public Clients](https://tools.ietf.org/html/rfc7636) and pronounced "pixy", is a method where the client sends a public identifier as well as a hashed random value generated on the client. This is the preferred authentication method for **native mobile clients**.
 
-    [Proof Key for Code Exchange by OAuth Public Clients][pkce], or PKCE for short (pronounced "pixy"). In this method, clients send a public identifier, as well as a hashed random value generated on the client. This is the preferred authentication method for native mobile clients.
+- **private_key_jwt** is where the client sends a [JWT][jwt] signed with a private key when requesting access tokens. The corresponding public key is registered with the IdP ahead of time, similar to SAML. This is the preferred authentication method for **web apps**.
 
-2. private_key_jwt
+### Auto-discovery
 
-    Clients send a [JWT][jwt] signed with a private key when requesting access tokens. The corresponding public key is registered ahead of time in the developer portal, similar to SAML. This is the preferred authentication method for web apps.
-
-[pkce]: https://tools.ietf.org/html/rfc7636
-
-### Developer portal
-
-[Register your application]({{site.baseurl}}/register/) The issuer will be the `client_id`, and make sure to register a `redirect_uri` for your application and a client cert if using private_key_jwt.
-
-## Auto-discovery
-
-Per the spec, login.gov provides a JSON endpoint with data for OpenID Connect auto-discovery at:
-
-```
-https://idp.int.login.gov/.well-known/openid-configuration
-```
+Consistent with the specification, login.gov provides a JSON endpoint with data for OpenID Connect auto-discovery at: **[https://idp.int.login.gov/.well-known/openid-configuration](https://idp.int.login.gov/.well-known/openid-configuration)**
 
 ## Authorize
 
@@ -68,7 +48,7 @@ Users need to authorize OpenID Connect 1.0 clients individually. To present the 
 
 ### Authorization request
 
-View example as <button data-example="pkce">PKCE</button><button data-example="private_key_jwt">private_key_jwt</button>
+View example as...<span class="space"></span><button data-example="pkce">PKCE</button><button data-example="private_key_jwt">private_key_jwt</button>
 
 <div markdown="1" data-example="pkce">
 ```bash
@@ -194,7 +174,7 @@ Clients use the token endpoint to exchange the authorization `code` for an `id_t
 
 ### Token request
 
-View example as <button data-example="pkce">PKCE</button><button data-example="private_key_jwt">private_key_jwt</button>
+View example as...<span class="space"></span><button data-example="pkce">PKCE</button><button data-example="private_key_jwt">private_key_jwt</button>
 
 <div markdown="1" data-example="pkce">
 ```bash
@@ -219,7 +199,7 @@ grant_type=authorization_code
 * <span id="token-client-assertion" data-anchor>**client_assertion** *required for private_key_jwt*</span>
   A signed [JWT][jwt].
 
-  <div class="usa-accordion">
+  <div class="usa-accordion-bordered">
   <button class="usa-accordion-button" aria-controls="client-assertion">
   View JWT details
   </button>
@@ -297,7 +277,7 @@ grant_type=authorization_code
     }
     ```
 
-    <div class="usa-accordion">
+    <div class="usa-accordion-bordered">
     <button class="usa-accordion-button" aria-controls="id-token-details">
     View JWT claim details
     </button>
@@ -480,7 +460,7 @@ https://example.com/response?
     Array.prototype.slice.call(document.querySelectorAll('button[data-example]')).forEach(function(button) {
       var show = button.getAttribute('data-example') == type;
 
-      button.className = show ? 'usa-button-active' : '';
+      button.className = show ? 'usa-button' : 'usa-button-secondary';
     });
 
 

@@ -1,6 +1,5 @@
 ---
 title: User attributes
-permalink: /attributes/
 ---
 
 # User attributes

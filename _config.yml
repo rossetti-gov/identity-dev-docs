@@ -3,7 +3,7 @@ title: login.gov
 description: Welcome to the Login.gov developer documentation!
 uswds: "/assets/uswds"
 
-gems:
+plugins:
   - jekyll-redirect-from
 
 whitelist:

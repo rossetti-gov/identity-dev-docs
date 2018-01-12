@@ -1,8 +1,8 @@
 ---
-title: Register your service provider
-permalink: /register/
+title: Test your service provider
 redirect_from:
   - /registering-your-sp/
+  - /register/
 ---
 
 # Register your service provider
