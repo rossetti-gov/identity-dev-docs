@@ -86,10 +86,10 @@ SAML_REQUEST = base64(deflate(payload))
 ```
 
 <div class="usa-accordion-bordered">
-<button class="usa-accordion-button" aria-controls="authn-request">
+<button class="usa-accordion-button" aria-controls="authn-request-example">
 View example authentication request
 </button>
-<div id="authn-request" class="usa-accordion-content" markdown="1">
+<div id="authn-request-example" class="usa-accordion-content" markdown="1">
 An example authentication request, with indentation added for readability.
 
 ```xml
@@ -171,10 +171,10 @@ SAMLResponse=${SAML_RESPONSE}
 The SAMLResponse is a base64-encoded XML payload that contains encrypted data.
 
 <div class="usa-accordion-bordered">
-<button class="usa-accordion-button" aria-controls="authn-response">
+<button class="usa-accordion-button" aria-controls="authn-response-example">
 View example authentication response
 </button>
-<div id="authn-response" class="usa-accordion-content" markdown="1">
+<div id="authn-response-example" class="usa-accordion-content" markdown="1">
 An example authentication response, after it has been base64 decoded, with indentation added for readability.
 
 ```xml
@@ -239,10 +239,10 @@ The `SAMLRequest` parameter is a base64-encoded, deflate-compressed XML payload 
 All logout requests must be signed — we require RSA SHA-256 signatures embedded with logout requests.
 
 <div class="usa-accordion-bordered">
-<button class="usa-accordion-button" aria-controls="logout-request">
+<button class="usa-accordion-button" aria-controls="logout-request-example">
 View example logout request
 </button>
-<div id="logout-request" class="usa-accordion-content" markdown="1">
+<div id="logout-request-example" class="usa-accordion-content" markdown="1">
 An example logout request payload, with indentation added for readability.
 
 ```xml
@@ -295,10 +295,10 @@ The SAMLResponse is a base64-encoded XML payload that contains encrypted data.
 
 
 <div class="usa-accordion-bordered">
-<button class="usa-accordion-button" aria-controls="logout-response">
+<button class="usa-accordion-button" aria-controls="logout-response-example">
 View example logout response
 </button>
-<div id="logout-response" class="usa-accordion-content" markdown="1">
+<div id="logout-response-example" class="usa-accordion-content" markdown="1">
 An example decoded logout response, with indentation added for readability.
 
 ```xml
@@ -338,46 +338,38 @@ An example decoded logout response, with indentation added for readability.
 </div>
 </div>
 
-# SAML libraries
+## SAML libraries
 
 Here's a list of open-source libraries to help speed up your SAML development.
 
-## Java
-
+### Java
 - [OneLogin's SAML Java Toolkit](https://github.com/onelogin/java-saml)
 - [OpenSAML](https://wiki.shibboleth.net/confluence/display/OS30/Home)
 - [OpenAM](https://forgerock.org/openam/)
 - [Spring Security SAML](http://projects.spring.io/spring-security-saml/)
 
-## PHP
-
+### PHP
 - [OneLogin's SAML PHP Toolkit](https://github.com/onelogin/php-saml)
 
-## Drupal
-
+### Drupal
 - [OneLogin SAML plugin for Drupal](https://github.com/onelogin/drupal-saml)
 
-## Joomla
-
+### Joomla
 - [Joomla SAML Authentication plugin](https://github.com/onelogin/joomla-saml), based on OneLogin PHP SAML Toolkit
 
-## Python
-
+### Python
 - [OneLogin's SAML Python Toolkit](https://github.com/onelogin/python-saml)
 - [OneLogin's SAML Python Toolkit](https://github.com/onelogin/python3-saml) (compatible with Python3)
 - [pysaml2 integration for Django](https://pypi.python.org/pypi/djangosaml2)
 
-## Ruby
-
+### Ruby
 - [Ruby SAML](https://github.com/onelogin/ruby-saml)
 - [OmniAuth SAML](https://github.com/omniauth/omniauth-saml)
 - [libsaml](https://github.com/digidentity/libsaml)
 
-## Node.js
-
+### Node.js
 - [SAML 2.0 authentication with Passport](https://github.com/bergie/passport-saml)
 - [SAML 2.0 Node.js helpers](https://www.npmjs.com/package/saml2-js)
 
-## C/C++
-
+### C/C++
 - [OpenSAML-C++](https://shibboleth.net/products/opensaml-cpp.html)
