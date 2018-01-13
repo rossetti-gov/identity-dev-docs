@@ -5,7 +5,7 @@ redirect_from:
   - /saml/examples/
 ---
 
-# Example Apps
+# Example apps
 
 The login.gov team has created a few service provider implementations for reference. All are open source in the public domain and are available for agencies to inspect and experiment with.
 

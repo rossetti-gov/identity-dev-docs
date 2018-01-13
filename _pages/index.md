@@ -16,7 +16,6 @@ This contains everything you'll need as a federal government agency to integrate
 - [Register your application]({{ site.baseurl }}/register)
 </div>
 
-
 ## Interested in using login.gov?
 
 Are you a federal agency interested in using login.gov for your digital services? Get in contact with us at [partners@login.gov](mailto:partners@login.gov)

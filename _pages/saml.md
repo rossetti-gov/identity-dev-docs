@@ -23,7 +23,7 @@ login.gov is a standard SAML identity provider, adhering to the [Web Browser SSO
 
 ## Getting started
 
-SAML is an established standard, but can be a bit complex. We recommend seeing if there is a [SAML library for your language]({{site.baseurl}}/saml/libs/) and using that before trying to build a new integration from scratch.
+SAML is an established standard, but can be a bit complex. We recommend seeing if there is a [SAML library for your language](#saml-libraries) and using that before trying to build a new integration from scratch.
 
 ### Configuration
 
@@ -57,7 +57,7 @@ Here are values needed to configure your service provider (SP) to work with logi
 
 ### Developer portal
 
-Follow instructions to [register your application]({{site.baseurl}}/register/).
+Follow instructions to [register your application]({{ site.baseurl }}/register).
 
 ## Metadata
 
@@ -144,7 +144,7 @@ The supported LOA levels area, place one of these values inside a `<saml:AuthnCo
   - `http://idmanagement.gov/ns/assurance/loa/1`
   - `http://idmanagement.gov/ns/assurance/loa/3`
 
-To request specific attributes, list them (comma-separated) as the query parameter for `http://idmanagement.gov/ns/requested_attributes?ReqAttr=`. See the [user attributes]({{ '/attributes' | relative_url }}) for the list of attributes that can be requested.
+To request specific attributes, list them (comma-separated) as the query parameter for `http://idmanagement.gov/ns/requested_attributes?ReqAttr=`. See the [user attributes]({{ site.baseurl }}/attributes) for the list of attributes that can be requested.
 
 An LOA3 request for email, phone, first name, last name, and SSN might look like:
 
@@ -338,3 +338,47 @@ An example decoded logout response, with indentation added for readability.
 
 </div>
 </div>
+
+# SAML libraries
+
+Here's a list of open-source libraries to help speed up your SAML development.
+
+## Java
+
+- [OneLogin's SAML Java Toolkit](https://github.com/onelogin/java-saml)
+- [OpenSAML](https://wiki.shibboleth.net/confluence/display/OS30/Home)
+- [OpenAM](https://forgerock.org/openam/)
+- [Spring Security SAML](http://projects.spring.io/spring-security-saml/)
+
+## PHP
+
+- [OneLogin's SAML PHP Toolkit](https://github.com/onelogin/php-saml)
+
+## Drupal
+
+- [OneLogin SAML plugin for Drupal](https://github.com/onelogin/drupal-saml)
+
+## Joomla
+
+- [Joomla SAML Authentication plugin](https://github.com/onelogin/joomla-saml), based on OneLogin PHP SAML Toolkit
+
+## Python
+
+- [OneLogin's SAML Python Toolkit](https://github.com/onelogin/python-saml)
+- [OneLogin's SAML Python Toolkit](https://github.com/onelogin/python3-saml) (compatible with Python3)
+- [pysaml2 integration for Django](https://pypi.python.org/pypi/djangosaml2)
+
+## Ruby
+
+- [Ruby SAML](https://github.com/onelogin/ruby-saml)
+- [OmniAuth SAML](https://github.com/omniauth/omniauth-saml)
+- [libsaml](https://github.com/digidentity/libsaml)
+
+## Node.js
+
+- [SAML 2.0 authentication with Passport](https://github.com/bergie/passport-saml)
+- [SAML 2.0 Node.js helpers](https://www.npmjs.com/package/saml2-js)
+
+## C/C++
+
+- [OpenSAML-C++](https://shibboleth.net/products/opensaml-cpp.html)

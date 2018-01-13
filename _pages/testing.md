@@ -41,7 +41,7 @@ These attributes are required for all applications.
   Defines the type of encryption your SP supports. Currently, only `aes256-cbc` is supported.
 
 - <span id="public-certificate" data-anchor>**Public certificate** *required*</span>
-  The public certificate, PEM encoded, allowing login.gov to verify the authenticity of authentication and logout requests. Learn how to [generate a self-signed certificate]({{site.baseurl}}/certs/).
+  The public certificate, PEM encoded, allowing login.gov to verify the authenticity of authentication and logout requests.
 
 ## Additional Attributes
 
@@ -79,7 +79,7 @@ These attributes are only needed for SAML implementations.
   ```
 
 - <span id="attribute-bundle" data-anchor>**Attribute bundle**\*</span>
-  The preset bundle of attributes your SP requires. login.gov allows you to either pre-define what attributes your SP receives or request them at run time. [See the list of available attributes.]({{site.baseurl}}/attributes/)
+  The preset bundle of attributes your SP requires. login.gov allows you to either pre-define what attributes your SP receives or request them at run time. [See the list of available attributes.]({{ site.baseurl }}/attributes)
 
 ### OpenID Connect
 
