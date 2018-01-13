@@ -12,8 +12,7 @@ This contains everything you'll need as a federal government agency to integrate
 <div markdown="1" class="checklist">
 - [Determine prerequisites]({{ site.baseurl }}/attributes)
 - [Build and configure your application]({{ site.baseurl }}/examples)
-- [Generating self-signed certificates]({{ site.baseurl }}/certs)
-- [Register your application]({{ site.baseurl }}/register)
+- [Start testing]({{ site.baseurl }}/testing)
 </div>
 
 ## Interested in using login.gov?

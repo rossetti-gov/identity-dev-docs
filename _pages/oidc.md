@@ -87,7 +87,7 @@ https://idp.int.login.gov/openid_connect/authorize?
     - `http://idmanagement.gov/ns/assurance/loa/3`
 
 * <span id="authorize-client-id" data-anchor>**client_id** *required*</span>
-  Unique identifier from the client. It must be registered in advance in the [developer portal](#developer-portal).
+  Unique identifier from the client. It must be registered in advance in the [developer portal]().
 
 * <span id="authorize-code-challenge" data-anchor>**code_challenge** *required for PKCE*</span>
   The URL-safe base64 encoding of the SHA256 digest of a random value generated on the client. The original random value is referred to as the [`code_verifier`](#token-code-verifier) is used later in the token endpoint.
@@ -111,7 +111,7 @@ https://idp.int.login.gov/openid_connect/authorize?
   Must be `code`.
 
 * <span id="authorize-redirect-uri" data-anchor>**redirect_uri** *required*</span>
-  URI that login.gov will redirect to, pass results as query parameters. It must be registered in advance in the [developer portal](#developer-portal).
+  URI that login.gov will redirect to, pass results as query parameters. It must be registered in advance in the [developer portal]().
 
 * <span id="authorize-scope" data-anchor>**scope** *required*</span>
   Example: `openid email`
@@ -436,7 +436,7 @@ https://idp.int.login.gov/openid_connect/logout?
   An `id_token` value from the [token endpoint response](#token-response).
 
 - <span id="logout-post-logout-redirect-uri" data-anchor>**post_logout_redirect_uri** *required*</span>
-  URI that login.gov will redirect to, pass results as query parameters. It must be registered in advance in the [developer portal](#developer-portal) as a `redirect_uri`.
+  URI that login.gov will redirect to, pass results as query parameters. It must be registered in advance in the [developer portal]() as a `redirect_uri`.
 
 - <span id="logout-state" data-anchor>**state** *required*</span>
   Unique value, will be returned in a successful logout. It must be at least **32** characters long.

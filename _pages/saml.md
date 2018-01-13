@@ -85,12 +85,12 @@ The `SAMLRequest` parameter is a base64-encoded, deflate-compressed XML payload 
 SAML_REQUEST = base64(deflate(payload))
 ```
 
-<div class="usa-accordion">
+<div class="usa-accordion-bordered">
 <button class="usa-accordion-button" aria-controls="authn-request">
 View example authentication request
 </button>
 <div id="authn-request" class="usa-accordion-content" markdown="1">
-An example authentication request, with indendation added for readability.
+An example authentication request, with indentation added for readability.
 
 ```xml
 <samlp:AuthnRequest AssertionConsumerServiceURL='https://sp.int.login.gov/auth/saml/callback?utf8=%E2%9C%93&amp;loa=1'
@@ -170,7 +170,7 @@ SAMLResponse=${SAML_RESPONSE}
 
 The SAMLResponse is a base64-encoded XML payload that contains encrypted data.
 
-<div class="usa-accordion">
+<div class="usa-accordion-bordered">
 <button class="usa-accordion-button" aria-controls="authn-response">
 View example authentication response
 </button>
@@ -236,15 +236,14 @@ https://idp.int.login.gov/api/saml/logout?SAMLRequest=${SAML_REQUEST}
 
 The `SAMLRequest` parameter is a base64-encoded, deflate-compressed XML payload of a `<samlp:LogoutRequest>`.
 
-All logout requests must be signed -- we require RSA SHA-256 signatures embedded with logout requests.
+All logout requests must be signed — we require RSA SHA-256 signatures embedded with logout requests.
 
-<div class="usa-accordion">
+<div class="usa-accordion-bordered">
 <button class="usa-accordion-button" aria-controls="logout-request">
 View example logout request
 </button>
 <div id="logout-request" class="usa-accordion-content" markdown="1">
 An example logout request payload, with indentation added for readability.
-
 
 ```xml
 <samlp:LogoutRequest Destination='https://idp.int.login.gov/api/saml/logout'
@@ -295,7 +294,7 @@ SAMLResponse=${SAML_RESPONSE}
 The SAMLResponse is a base64-encoded XML payload that contains encrypted data.
 
 
-<div class="usa-accordion">
+<div class="usa-accordion-bordered">
 <button class="usa-accordion-button" aria-controls="logout-response">
 View example logout response
 </button>
