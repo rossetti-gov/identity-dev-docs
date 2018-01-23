@@ -31,7 +31,7 @@ table {
 
 .checklist {
   ul {
-    list-style-image: url('/assets/img/check.svg');
+    list-style-image: url('{{ site.baseurl }}/assets/img/check.svg');
   }
 }
 
