@@ -6,13 +6,14 @@ redirect_from:
 
 # OpenID Connect developer guide
 
-login.gov supports [OpenID Connect 1.0](http://openid.net/developers/specs), an extension of Oauth 2.0, conforming to the [iGov Profile](https://openid.net/wg/igov). Please note: links to the login.gov integration environment in this guide are only accessible to approved integrating agencies.
+login.gov supports [OpenID Connect 1.0](http://openid.net/developers/specs), an extension of Oauth 2.0, conforming to the [iGov Profile](https://openid.net/wg/igov).
+
+{% include basic-auth-warn.html %}
 
 ### Contents
 
 <div markdown="1" class="compact-list">
 - [Getting started](#getting-started)
-- [Auto-discovery](#auto-discovery)
 - [Authorize](#authorize)
   - [Authorization request](#authorization-request)
   - [Authorization response](#authorization-response)
@@ -26,6 +27,7 @@ login.gov supports [OpenID Connect 1.0](http://openid.net/developers/specs), an 
 - [Logout](#logout)
   - [Logout Request](#logout-request)
   - [Logout Response](#logout-response)
+- [Example apps](#example-apps)
 </div>
 
 ## Getting started
@@ -483,3 +485,18 @@ https://example.com/response?
 
   showExamples('pkce');
 </script>
+
+## Example apps
+
+The login.gov team has created example clients to speed up your development, all open source in the public domain.
+
+- [ASP.NET](https://github.com/18F/identity-openidconnect-aspnet)
+- [Java / Spring Security](https://github.com/18F/identity-oidc-java-spring-security)
+- [Java / Spring Boot](https://github.com/18F/identity-oidc-java-spring-boot)
+- [Java / Spring Boot XML](https://github.com/18F/identity-oidc-java-spring-boot-xml)
+- [iOS (Swift) / AppAuth](https://github.com/18F/identity-openidconnect-ios-client)
+- [Ruby / Sinatra](https://github.com/18F/identity-openidconnect-sinatra)
+- [Node.js / Express.js](https://github.com/18F/identity-oidc-expressjs)
+  <!-- Also: https://github.com/18F/identity-oidc-nodejs-express -->
+- [Groovy](https://github.com/18F/identity-oidc-groovy)
+- [Python / Django](https://github.com/18F/identity-oidc-python-django)
