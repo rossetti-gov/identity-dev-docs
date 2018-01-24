@@ -12,5 +12,5 @@ This contains everything you'll need as a federal government agency to integrate
 <div markdown="1" class="checklist">
 - First, build your application. We have guides for both [OpenID Connect]({{ site.baseurl }}/oidc) (recommended) and [SAML]({{ site.baseurl }}/saml). We also have example apps to get you up and running quickly.
 - Next, use our dashboard to [register your app]({{ site.baseurl }}/testing).
-- Create test accounts with our identity provider (IdP) and start testing.
+- Create accounts in our agency integration identity provider (IdP) and start testing.
 </div>

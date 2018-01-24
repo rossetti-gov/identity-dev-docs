@@ -16,8 +16,7 @@ Once you've created your app and implemented an identity protocol, such as OpenI
 The login.gov dashboard is the place you'll manage your team and test applications.
 1. First, go to the dashboard at [dashboard.int.login.gov](https://dashboard.int.login.gov)
 2. Then, in the upper-right corner, click **Log in** to create an account in the login.gov IdP in the agency integration environment (at [idp.int.login.gov](https://idp.int.login.gov)).
-3. After successfully logging in, you'll see some new links in the dashboard navigation. Click **My service providers** to see where your applications will be listed.
-4. To register your application, click the **Create a new service provider** link and fill out the following information in the form:
+3. After successfully logging in, you'll see some new links in the dashboard navigation. Click **My service providers**, then **Create a new service provider** and fill out the following information in the form:
   - **User group**<br>The agency group you would like this client to be assigned to.
   - **Friendly name**<br>The name of your app that will get displayed to users when logging in.
   - **Description**<br>A description of the app.
@@ -41,5 +40,5 @@ The login.gov dashboard is the place you'll manage your team and test applicatio
   - **Return to SP URL** — *SAML only*<br>The URL of the SP which login.gov provides to users when they wish to go directly to the SP site or cancel out of authentication. For example `https://app.agency.gov`
   - **Attribute bundle**<br>The possible [user attributes]({{ site.baseurl }}/attributes) to be requested by your app. Note for LOA1, only the UUID and `email` can be requested.
   - **Active**<br>Used to activate or deactivate the client.
-5. One all application details have been filled out, click **Create** to register the client with the login.gov IdP in the agency integration environment.
-6. Start testing! The login.gov team will work with you along the way.
+4. One all application details have been filled out, click the **Create** button to register the client with the login.gov IdP in the agency integration environment.
+5. Start testing! The login.gov team will work with you along the way to resolve any issues.
