@@ -58,7 +58,7 @@ The authorization endpoint handles authentication and authorization of a user. T
   Unique identifier for the client. This will be registered with the login.gov IdP in advance.
 
 * **code_challenge** — *required for PKCE*
-  The URL-safe base64 encoding of the SHA256 digest of a random value generated on the client. The original random value is referred to as the [`code_verifier`](#token-code-verifier) is used later in the token endpoint. Generating these values in Ruby could look like, for example:
+  The URL-safe base64 encoding of the SHA256 digest of a random value generated on the client. The original random value is referred to as the `code_verifier` is used later in the token endpoint. Generating these values in Ruby could look like, for example:
   ```ruby
   code_verifier = SecureRandom.hex
   => "7a5e819dd39f17242fdeeba0c1c80be6"
@@ -170,7 +170,7 @@ Clients use the token endpoint to exchange the authorization `code` for an `id_t
   The URL parameter value from the `redirect_uri` in the authorization step.
 
 * **code_verifier** — *required for PKCE*
-  The original value (before the SHA256) generated for the authorization request for PKCE that corresponds to the [`code_challenge`](#authorize-code-challenge).
+  The original value (before the SHA256) generated for the authorization request for PKCE that corresponds to the `code_challenge`.
 
 * **grant_type** — *required*
   Must be `authorization_code`
@@ -211,7 +211,7 @@ The token response will be a JSON object containing the following:
   The number of seconds that the access token will expire in.
 
 * **id_token** (string)
-  A signed [JWT][jwt] that contains basic attributes about the user such as user ID for this client (encoded as the `sub` claim) as well as the claims requested as part of the `scope` in the authorization request. See the [User Info Response](#user-info-response) section for details on the claims. The public key to verify this JWT is available from the [certs](#certs) endpoint.
+  A signed [JWT][jwt] that contains basic attributes about the user such as user ID for this client (encoded as the `sub` claim) as well as the claims requested as part of the `scope` in the authorization request. See the [User Info Response](#user-info-response) section for details on the claims. The public key to verify this JWT is available from the [certificates](#certificates) endpoint.
 
 Here's an example token response:
 
@@ -226,7 +226,7 @@ Here's an example token response:
 
 The **id_token** contains the following claims:
 
-* **acr** (string) — Authentication Context Class Reference value or LOA (level of authentication) of the returned claims, from the original [authorization request](#authorization-request).
+* **acr** (string) — Authentication Context Class Reference value or LOA (level of authentication) of the returned claims, from the original [authorization request](#authorization).
 * **at_hash** (string) — Access token hash, a url-safe base-64 encoding of the left 128 bits of the SHA256 of the `access_token` value. Provided so the client can verify the `access_token` value.
 * **aud** (string) — Audience, the client ID.
 * **c_hash** (string) — Code hash, a url-safe base-64 encoding of the left 128 bits of the SHA256 of the authorization `code` value. Provided so the client verify the `code` value.
@@ -235,7 +235,7 @@ The **id_token** contains the following claims:
 * **iss** (string) — Issuer, will be `https://idp.int.login.gov`.
 * **jti** (string) — An random string generated to ensure uniqueness.
 * **nbf** (number) — "Not before", an integer timestamp of when the token will start to be valid (number of seconds since the Unix Epoch).
-* **nonce** (string) — The nonce provided by the client in the [authorization request](#authorization-request)
+* **nonce** (string) — The nonce provided by the client in the [authorization request](#authorization)
 * **sub** (string) — Subject, unique ID for this user. This ID is unique per client.
 
 Here's an example decoded **id_token**:
